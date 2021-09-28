@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #121212;
+  color: rgb(255, 255, 255, 0.87);
+  --font-size:10;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.appContainer {
   min-height: 100vh;
+  height: 100vh;
+}
+
+.headerMenu {
+  display: block;
+}
+
+.appHeader {
+  height: 5%;
+  font-size: 1.5em;
+  position: sticky;
+  top: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.appBody {
+  height: 100%;
+  position: relative;
+}
+
+.floatingTimeLine {
+  position: absolute;
+  left: 2vw;
+  top: 0;
+  transform: translateY(30%);
+  display:none;
+}
+
+.timelineTrack {
+  height: 60vh;
+  border-left: 3px solid lightgray;
+}
+
+.appBodyContent {
+  height: 100%;
+  border-top: 1px solid black;
+  overflow: auto;
+  padding: 5vh 10vw;
+}
+
+.appBodyContent > div {
+  /* height: 4000px; */
+}
+
+.homePageContainer{
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5vh;
 }
 
-.App-link {
-  color: #61dafb;
+.profilePicContainer {
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.profileContentsContainer {
+  display:flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.profileName{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.profileJobTitle{
+  font-size: 1.5rem;
+}
+
+.profileDescription{
+  font-size: 1rem;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 10%);
+  border-radius: 10px;
+}
+
+/* media sizes for larger than small screen*/
+@media only screen and (min-width: 800px) {
+  .headerMenu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .floatingTimeLine {
+    display: block;
+  }
+
+  .homePageContainer{
+    flex-direction: row;
+    gap: 5vw;
+  }
+
+  .profileName{
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  
+  .profileJobTitle{
+    font-size: 2rem;
+  }
+  
+  .profileDescription{
+    font-size: 1.5rem;
   }
 }

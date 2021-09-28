@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import HomePage from '../Contents/1_HomePage'
+import AboutMePage from '../Contents/2_AboutMePage'
 
 export default function PageBody() {
     return (
@@ -9,6 +10,7 @@ export default function PageBody() {
             </div>
             <div className="appBodyContent">
                 <HomePage/>
+                <AboutMePage/>
             </div>
         </div>
     )

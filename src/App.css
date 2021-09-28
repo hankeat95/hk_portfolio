@@ -1,13 +1,14 @@
-body{
+body {
   font-family: 'Open Sans', sans-serif;
   background-color: #121212;
-  color: rgb(255, 255, 255, 0.87);
-  --font-size:10;
+  color: rgb(255, 255, 255, 0.75);
+  --font-size: 10;
 }
 
 .appContainer {
-  min-height: 100vh;
+  max-height: 100vh;
   height: 100vh;
+  overflow: hidden;
 }
 
 .headerMenu {
@@ -22,19 +23,21 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 5vw;
 }
 
 .appBody {
-  height: 100%;
+  height: 95%;
   position: relative;
+  overflow: auto;
 }
 
 .floatingTimeLine {
-  position: absolute;
+  position: fixed;
   left: 2vw;
   top: 0;
   transform: translateY(30%);
-  display:none;
+  display: none;
 }
 
 .timelineTrack {
@@ -45,45 +48,96 @@ body{
 .appBodyContent {
   height: 100%;
   border-top: 1px solid black;
-  overflow: auto;
-  padding: 5vh 10vw;
+  padding: 5vh 7vw;
 }
 
-.appBodyContent > div {
-  /* height: 4000px; */
-}
 
-.homePageContainer{
-  display:flex;
+.homePageContainer {
+  display: flex;
   flex-direction: column;
   gap: 5vh;
 }
 
 .profilePicContainer {
   align-self: center;
+  justify-self: center;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+.profilePicContainer>img {
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
 }
 
 .profileContentsContainer {
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 3vh;
 }
 
-.profileName{
+.profileName {
   font-size: 2.5rem;
   font-weight: bold;
+  color: white;
 }
 
-.profileJobTitle{
+.profileJobTitle {
   font-size: 1.5rem;
 }
 
-.profileDescription{
+.profileDescription {
   font-size: 1rem;
 }
 
+.profileActionButtons {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  justify-content: space-between;
+}
+
+.profileActionButtons > button{
+  background-color: #3700B3;
+}
+
+.profileActionButtons > button:hover{
+  background-color: hsl(258, 100%, 35%);
+}
+
+.profileMoreInfoArrowIcon>svg {
+  animation: moreInfoDivAnimation 1s infinite;
+}
+
+.profileMoreInfoDiv {
+  cursor: pointer;
+  color: #03dac6;
+  transition: transform 0.5s ease-in-out;
+}
+
+.profileMoreInfoDiv:hover {
+  transform: translateY(-5%);
+}
+
+.aboutMeContainer{
+  height:500px;
+}
+
+@keyframes moreInfoDivAnimation {
+  0% {
+    transform: translateY(25%);
+  }
+  50% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(25%);
+  }
+}
+
 /* custom scrollbar */
-::-webkit-scrollbar {
+
+/* ::-webkit-scrollbar {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
@@ -93,9 +147,10 @@ body{
 ::-webkit-scrollbar-thumb {
   background: hsl(0, 0%, 10%);
   border-radius: 10px;
-}
+} */
 
 /* media sizes for larger than small screen*/
+
 @media only screen and (min-width: 800px) {
   .headerMenu {
     display: none;
@@ -103,22 +158,24 @@ body{
   .floatingTimeLine {
     display: block;
   }
-
-  .homePageContainer{
+  .appBodyContent {
+    padding: 5vh 10vw;
+  }
+  .homePageContainer {
     flex-direction: row;
     gap: 5vw;
   }
-
-  .profileName{
-    font-size: 2.7rem;
+  .profileName {
+    font-size: 2.5rem;
     font-weight: bold;
   }
-  
-  .profileJobTitle{
-    font-size: 2rem;
+  .profileJobTitle {
+    font-size: 1.7rem;
   }
-  
-  .profileDescription{
-    font-size: 1.5rem;
+  .profileDescription {
+    font-size: 1.3rem;
+  }
+  .profilePicContainer {
+    align-self: flex-start;
   }
 }

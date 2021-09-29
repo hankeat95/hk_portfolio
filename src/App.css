@@ -1,8 +1,17 @@
+html {
+  --global-backgroundColor: #121212;
+  --global-fontColor: rgb(255, 255, 255, 0.75);
+  --global-fontColorBright: white;
+  --global-borderColor: black;
+  --global-iconColor: hsl(202, 64%, 60%);
+  --global-fontsize: 10;
+  --global-timelineItemPercentage: calc(100% / 6);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #121212;
-  color: rgb(255, 255, 255, 0.75);
-  --font-size: 10;
+  background-color: var(--global-backgroundColor);
+  color: var(--global-fontColor);
 }
 
 .appContainer {
@@ -11,8 +20,28 @@ body {
   overflow: hidden;
 }
 
+.headerMenuContainer {
+  display: flex;
+}
+
+.headerMenuContainer>div {
+  margin: auto 5px;
+}
+
+.darkModeControl {
+  cursor: pointer;
+}
+
 .headerMenu {
   display: block;
+  cursor: pointer;
+  margin: auto 0;
+}
+
+.headerLogo {
+  font-family: 'Audiowide', cursive;
+  cursor: pointer;
+  margin: auto 0;
 }
 
 .appHeader {
@@ -24,6 +53,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 5vw;
+  border-bottom: 1px solid var(--global-borderColor);
 }
 
 .appBody {
@@ -41,21 +71,98 @@ body {
 }
 
 .timelineTrack {
+  position: relative;
   height: 60vh;
-  border-left: 3px solid lightgray;
+  border-left: 3px solid var(--global-fontColor);
+}
+
+.timelineCurrentDot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  left: 0;
+  top: 0%;
+  transform: translateX(-65%);
+  z-index: 1;
+  transition: top 0.8s ease-in-out;
+}
+
+.timelineContent {
+  position: absolute;
+  font-size: 0.7rem;
+  left: 20px;
+  width: 100px;
+  transform: translateY(-15%);
+  color: rgba(211, 211, 211, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.timelineContent:hover {
+  color: var(--global-fontColorBright);
+  cursor: pointer;
+}
+
+.timelineContent::before {
+  content: "";
+  width: 18px;
+  top: -15%;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(211, 211, 211, 0.5);
+  background-color: var(--global-backgroundColor);
+  display: block;
+  position: absolute;
+  left: -32%;
+}
+
+.timelineItem1 {
+  top: 0%;
+}
+
+.timelineItem2 {
+  top: calc(var(--global-timelineItemPercentage) * 1)
+}
+
+.timelineItem3 {
+  top: calc(var(--global-timelineItemPercentage) * 2)
+}
+
+.timelineItem4 {
+  top: calc(var(--global-timelineItemPercentage) * 3)
+}
+
+.timelineItem5 {
+  top: calc(var(--global-timelineItemPercentage) * 4)
+}
+
+.timelineItem6 {
+  top: calc(var(--global-timelineItemPercentage) * 5)
+}
+
+.timelineItemLast {
+  top: 100%;
+}
+
+.timelineItemActive {
+  color: var(--global-fontColorBright);
 }
 
 .appBodyContent {
   height: 100%;
-  border-top: 1px solid black;
   padding: 5vh 7vw;
 }
 
-
-.homePageContainer {
+.homePageContentsContainer {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 5vh;
+}
+
+.contentPage {
+  padding: 5vh 0;
 }
 
 .profilePicContainer {
@@ -77,9 +184,9 @@ body {
 }
 
 .profileName {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: var(--global-fontColorBright);
 }
 
 .profileJobTitle {
@@ -97,11 +204,11 @@ body {
   justify-content: space-between;
 }
 
-.profileActionButtons > button{
+.profileActionButtons>button {
   background-color: #3700B3;
 }
 
-.profileActionButtons > button:hover{
+.profileActionButtons>button:hover {
   background-color: hsl(258, 100%, 35%);
 }
 
@@ -113,14 +220,86 @@ body {
   cursor: pointer;
   color: #03dac6;
   transition: transform 0.5s ease-in-out;
+  font-weight: bold;
 }
 
 .profileMoreInfoDiv:hover {
   transform: translateY(-5%);
 }
 
-.aboutMeContainer{
-  height:500px;
+.aboutMeContainer {
+  height: 500px;
+}
+
+.aboutMeHeaderContainer {
+  text-align: center;
+}
+
+.aboutMeTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.aboutMeSubTitle {
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.aboutMeDescriptions {
+  padding: 20px 0;
+  font-size: 1rem;
+}
+
+.aboutMeExtraDetails svg {
+  font-size: 3rem;
+  color: var(--global-iconColor);
+  transition: transform 0.3s ease-in-out;
+}
+
+.aboutMePersonalDetails svg:hover {
+  transform: translateY(-5px);
+}
+
+.aboutMeExtraDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.aboutMeWorkExperienceCounter {
+  padding: 5vh 0;
+  align-self: center;
+}
+
+.aboutMeWorkExperienceCounter svg {
+  font-size: 5rem;
+}
+
+.workExperienceLabel {
+  font-weight: bold;
+}
+
+.workExperienceCounterText {
+  font-style: italic;
+}
+
+.aboutMePersonalDetails {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5vh;
+  padding-top: 2vh;
+  border-bottom: 1px solid;
+  justify-content: space-evenly;
+}
+
+.aboutMePersonalDetails>div {
+  width: 33%;
+}
+
+.aboutMePersonalDetailsValue {
+  font-weight: bold;
 }
 
 @keyframes moreInfoDivAnimation {
@@ -137,17 +316,19 @@ body {
 
 /* custom scrollbar */
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: hsl(0, 0%, 10%);
   border-radius: 10px;
-} */
+}
 
 /* media sizes for larger than small screen*/
 
@@ -155,19 +336,24 @@ body {
   .headerMenu {
     display: none;
   }
+  .headerLogo {
+    margin: auto;
+  }
   .floatingTimeLine {
     display: block;
   }
   .appBodyContent {
-    padding: 5vh 10vw;
+    padding: 5vh 15vw;
   }
-  .homePageContainer {
+  .contentPage {
+    padding: 20vh 0;
+  }
+  .homePageContentsContainer {
     flex-direction: row;
     gap: 5vw;
   }
   .profileName {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.3rem;
   }
   .profileJobTitle {
     font-size: 1.7rem;

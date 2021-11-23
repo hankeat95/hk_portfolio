@@ -1,10 +1,13 @@
 html {
   --global-backgroundColor: #121212;
   --global-fontColor: rgb(255, 255, 255, 0.75);
+  --global-fontColorPartial: rgb(255, 255, 255, 0.75);
   --global-fontColorBright: white;
   --global-borderColor: black;
   --global-iconColor: hsl(202, 64%, 60%);
   --global-fontsize: 10;
+  --fontColorSecondary: #9c27b0;
+  --timelineTrackDefaultOpacity: 0.3;
   --global-timelineItemPercentage: calc(100% / 6);
 }
 
@@ -12,6 +15,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: var(--global-backgroundColor);
   color: var(--global-fontColor);
+  overflow: hidden;
 }
 
 .appContainer {
@@ -63,6 +67,7 @@ body {
 }
 
 .floatingTimeLine {
+  width: 10vw;
   position: fixed;
   left: 2vw;
   top: 0;
@@ -74,13 +79,14 @@ body {
   position: relative;
   height: 60vh;
   border-left: 3px solid var(--global-fontColor);
+  transition: border-left 0.5s linear;
 }
 
 .timelineCurrentDot {
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: white;
+  background-color: var(--global-fontColorBright);
   border-radius: 50%;
   left: 0;
   top: 0%;
@@ -89,14 +95,18 @@ body {
   transition: top 0.8s ease-in-out;
 }
 
+.timelineContent>span {
+  opacity: var(--timelineTrackDefaultOpacity);
+  transition: opacity 0.2s ease-in-out;
+}
+
 .timelineContent {
   position: absolute;
   font-size: 0.7rem;
   left: 20px;
   width: 100px;
   transform: translateY(-15%);
-  color: rgba(211, 211, 211, 0.5);
-  transition: all 0.3s ease-in-out;
+  color: var(--global-fontColorPartial);
 }
 
 .timelineContent:hover {
@@ -115,6 +125,7 @@ body {
   display: block;
   position: absolute;
   left: -32%;
+  transition: background-color 0.5s linear;
 }
 
 .timelineItem1 {
@@ -146,7 +157,17 @@ body {
 }
 
 .timelineItemActive {
+  display: block !important;
+  font-weight: bold;
   color: var(--global-fontColorBright);
+}
+
+.timelineItemActive>span {
+  opacity: 1;
+}
+
+.timelineHovering>div>span {
+  opacity: 1;
 }
 
 .appBodyContent {
@@ -162,12 +183,18 @@ body {
 }
 
 .contentPage {
+  min-height: 300px;
   padding: 5vh 0;
 }
 
 .profilePicContainer {
   align-self: center;
   justify-self: center;
+  transition: clip-path 0.5s ease;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.polygon {
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
 
@@ -231,16 +258,16 @@ body {
   height: 500px;
 }
 
-.aboutMeHeaderContainer {
+.pageHeaderContainer {
   text-align: center;
 }
 
-.aboutMeTitle {
+.pageHeaderTitle {
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-.aboutMeSubTitle {
+.pageHeaderSubTitle {
   font-size: 0.8rem;
   font-style: italic;
   opacity: 0.8;
@@ -302,13 +329,110 @@ body {
   font-weight: bold;
 }
 
+.workExp_TimelineDiv {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timelineBox {
+  height: 100%;
+  width: 100%;
+}
+
+.timelineBoxContainer {
+  /* width: 50%; */
+  margin: auto;
+  display: block;
+  position: relative;
+  text-align: left;
+}
+
+.timelineBoxContainer>ul {
+  margin: 2.5em 0;
+  padding: 0;
+}
+
+.timelineBoxContainer>ul>li {
+  list-style: none;
+  margin: auto;
+  min-height: 50px;
+  border-left: 1px dashed var(--global-fontColorBright);
+  padding: 0 0 50px 25px;
+  position: relative;
+}
+
+.timelineBoxContainer>ul>li:last-child {
+  border-left: 0;
+}
+
+
+.currentWorkExp .workExp_TimelineHeader {
+  font-weight: bold;
+  font-size: larger;
+  color: var(--fontColorSecondary)
+}
+
+.currentWorkExp .workExp_TimelineWorkDuration {
+  font-weight: bold;
+  color: var(--fontColorSecondary)
+}
+
+.currentWorkExp::before {
+  content: "Now" !important;
+  height: 30px !important;
+  top: -10px !important;
+  border: none !important;
+  font-weight: bold;
+  color: var(--global-iconColor);
+  ;
+  background: var(--global-backgroundColor) !important;
+}
+
+
+.timelineBoxContainer>ul>li::before {
+  position: absolute;
+  left: -18px;
+  top: -5px;
+  content: " ";
+  border: 8px solid var(--global-fontColorBright);
+  border-radius: 500%;
+  background: var(--global-iconColor);
+  height: 20px;
+  width: 20px;
+}
+
+
+
+.workExp_TimelineHeader {
+  color: var(--global-iconColor);
+  position: relative;
+  font-size: large;
+  font-weight: bold;
+}
+
+.workExp_TimelineWorkDuration {
+  font-size: small;
+  font-style: italic;
+}
+
+.workExp_TimelineDescription {
+  color: var(--global-fontColor);
+}
+
+.workExp_TimelineDescription>ul li {
+  padding-top: 10px;
+}
+
 @keyframes moreInfoDivAnimation {
   0% {
     transform: translateY(25%);
   }
+
   50% {
     transform: translateY(40%);
   }
+
   100% {
     transform: translateY(25%);
   }
@@ -336,32 +460,49 @@ body {
   .headerMenu {
     display: none;
   }
+
   .headerLogo {
     margin: auto;
   }
+
   .floatingTimeLine {
     display: block;
   }
+
   .appBodyContent {
     padding: 5vh 15vw;
   }
+
   .contentPage {
     padding: 20vh 0;
   }
+
   .homePageContentsContainer {
     flex-direction: row;
     gap: 5vw;
   }
+
   .profileName {
     font-size: 2.3rem;
   }
+
   .profileJobTitle {
     font-size: 1.7rem;
   }
+
   .profileDescription {
     font-size: 1.3rem;
   }
+
   .profilePicContainer {
     align-self: flex-start;
+  }
+
+  .timelineBoxContainer {
+    width: 95%;
+  }
+
+  .timelineBoxContainer>ul>li {
+    padding: 0 0 50px 40px;
   }
 }

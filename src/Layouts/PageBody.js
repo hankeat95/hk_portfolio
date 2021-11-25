@@ -45,7 +45,7 @@ export default function PageBody() {
 
     const handleAppBodyScroll = (e) => {
         let scrolledAmount = e.target.scrollTop / e.target.scrollHeight;
-        console.log('scrolledAmount', scrolledAmount)
+        // console.log('scrolledAmount', scrolledAmount)
         if (scrolledAmount > 0.81) {
             setcurrentItem(5)
         }

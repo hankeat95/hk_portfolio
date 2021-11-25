@@ -44,7 +44,7 @@ export default function QualificationsPage() {
             secondaryHeader: "",
             details: [
                 "Smart Indoor Home Surveillance Monitoring System Using Raspberry Pi",
-                "Collaborate with Degree Final Year Project Supervisor, Dr. Chuah Chai Wen",
+                "Collaborated with Degree Final Year Project Supervisor, Dr. Chuah Chai Wen",
                 'Published to JOIV @ <a target="_blank" rel="noreferrer" href="http://joiv.org/index.php/joiv/article/view/172" >here',
             ]
         },

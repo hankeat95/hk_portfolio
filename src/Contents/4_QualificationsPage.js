@@ -6,7 +6,6 @@ import JournalPic from '../Resources/academicPaper.png'
 import Form6Pic from '../Resources/smi.jpg'
 import UTHM from '../Resources/uthm.jpg'
 import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
 import ModalFade from '@mui/material/Fade';
 import CloseIcon from '@mui/icons-material/Close';
 

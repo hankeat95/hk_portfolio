@@ -1,20 +1,22 @@
 html {
-  --global-backgroundColor: #121212;
-  --global-fontColor: rgb(255, 255, 255, 0.75);
-  --global-fontColorPartial: rgb(255, 255, 255, 0.75);
-  --global-fontColorBright: white;
-  --global-borderColor: black;
-  --global-iconColor: hsl(202, 64%, 60%);
-  --global-fontsize: 10;
+  --backgroundColor: #121212;
+  --fontColor: rgb(255, 255, 255, 0.75);
+  --fontColorPartial: rgb(255, 255, 255, 0.75);
+  --fontColorBright: white;
+  --borderColor: black;
+  --iconColor: hsl(202, 64%, 60%);
+  --fontsize: 10;
   --fontColorSecondary: #9c27b0;
   --timelineTrackDefaultOpacity: 0.3;
-  --global-timelineItemPercentage: calc(100% / 6);
+  --timelineItemPercentage: calc(100% / 6);
+  --carouselDescriptionBackgroundColor: rgba(0, 0, 0, 0.5);
+  --carouselShadowColor: black;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: var(--global-backgroundColor);
-  color: var(--global-fontColor);
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
   overflow: hidden;
 }
 
@@ -57,7 +59,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 5vw;
-  border-bottom: 1px solid var(--global-borderColor);
+  border-bottom: 1px solid var(--borderColor);
 }
 
 .appBody {
@@ -78,7 +80,7 @@ body {
 .timelineTrack {
   position: relative;
   height: 60vh;
-  border-left: 3px solid var(--global-fontColor);
+  border-left: 3px solid var(--fontColor);
   transition: border-left 0.5s linear;
 }
 
@@ -86,7 +88,7 @@ body {
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: var(--global-fontColorBright);
+  background-color: var(--fontColorBright);
   border-radius: 50%;
   left: 0;
   top: 0%;
@@ -106,11 +108,11 @@ body {
   left: 20px;
   width: 100px;
   transform: translateY(-15%);
-  color: var(--global-fontColorPartial);
+  color: var(--fontColorPartial);
 }
 
 .timelineContent:hover {
-  color: var(--global-fontColorBright);
+  color: var(--fontColorBright);
   cursor: pointer;
 }
 
@@ -121,7 +123,7 @@ body {
   height: 18px;
   border-radius: 50%;
   border: 1px solid rgba(211, 211, 211, 0.5);
-  background-color: var(--global-backgroundColor);
+  background-color: var(--backgroundColor);
   display: block;
   position: absolute;
   left: -32%;
@@ -133,23 +135,23 @@ body {
 }
 
 .timelineItem2 {
-  top: calc(var(--global-timelineItemPercentage) * 1)
+  top: calc(var(--timelineItemPercentage) * 1)
 }
 
 .timelineItem3 {
-  top: calc(var(--global-timelineItemPercentage) * 2)
+  top: calc(var(--timelineItemPercentage) * 2)
 }
 
 .timelineItem4 {
-  top: calc(var(--global-timelineItemPercentage) * 3)
+  top: calc(var(--timelineItemPercentage) * 3)
 }
 
 .timelineItem5 {
-  top: calc(var(--global-timelineItemPercentage) * 4)
+  top: calc(var(--timelineItemPercentage) * 4)
 }
 
 .timelineItem6 {
-  top: calc(var(--global-timelineItemPercentage) * 5)
+  top: calc(var(--timelineItemPercentage) * 5)
 }
 
 .timelineItemLast {
@@ -159,7 +161,7 @@ body {
 .timelineItemActive {
   display: block !important;
   font-weight: bold;
-  color: var(--global-fontColorBright);
+  color: var(--fontColorBright);
 }
 
 .timelineItemActive>span {
@@ -213,7 +215,7 @@ body {
 .profileName {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--global-fontColorBright);
+  color: var(--fontColorBright);
 }
 
 .profileJobTitle {
@@ -280,7 +282,7 @@ body {
 
 .aboutMeExtraDetails svg {
   font-size: 3rem;
-  color: var(--global-iconColor);
+  color: var(--iconColor);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -357,7 +359,7 @@ body {
   list-style: none;
   margin: auto;
   min-height: 50px;
-  border-left: 1px dashed var(--global-fontColorBright);
+  border-left: 1px dashed var(--fontColorBright);
   padding: 0 0 50px 25px;
   position: relative;
 }
@@ -384,9 +386,9 @@ body {
   top: -10px !important;
   border: none !important;
   font-weight: bold;
-  color: var(--global-iconColor);
+  color: var(--iconColor);
   ;
-  background: var(--global-backgroundColor) !important;
+  background: var(--backgroundColor) !important;
 }
 
 
@@ -395,9 +397,9 @@ body {
   left: -18px;
   top: -5px;
   content: " ";
-  border: 8px solid var(--global-fontColorBright);
+  border: 8px solid var(--fontColorBright);
   border-radius: 500%;
-  background: var(--global-iconColor);
+  background: var(--iconColor);
   height: 20px;
   width: 20px;
 }
@@ -405,7 +407,7 @@ body {
 
 
 .workExp_TimelineHeader {
-  color: var(--global-iconColor);
+  color: var(--iconColor);
   position: relative;
   font-size: large;
   font-weight: bold;
@@ -417,11 +419,61 @@ body {
 }
 
 .workExp_TimelineDescription {
-  color: var(--global-fontColor);
+  color: var(--fontColor);
 }
 
 .workExp_TimelineDescription>ul li {
   padding-top: 10px;
+}
+
+.carouselContainer {
+  margin: 20px auto;
+  box-shadow: 7px 10px 8px var(--carouselShadowColor);
+  max-width: 75vw;
+  width: 75vw;
+}
+
+.carouselScreen {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--carouselDescriptionBackgroundColor);
+  transition: background-color 0.3s linear;
+}
+
+.carouselScreenImage {
+  width: 100%;
+}
+
+.carouselScreenImage>img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carouselScreenDescription {
+  display: none;
+}
+
+.sliderPopUpBox{
+  position:absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--backgroundColor);
+  border: 1px solid black;
+  width: 80vw;
+  text-align: center;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.sliderPopUpCloseButton{
+  float:right;
+}
+
+.carouselInstructions {
+  font-size:small;
 }
 
 @keyframes moreInfoDivAnimation {
@@ -455,6 +507,13 @@ body {
 }
 
 /* media sizes for larger than small screen*/
+
+
+@media only screen and (max-width: 950px) {
+  .carouselContainer {
+    font-size: 0.8em;
+  }
+}
 
 @media only screen and (min-width: 800px) {
   .headerMenu {
@@ -505,4 +564,49 @@ body {
   .timelineBoxContainer>ul>li {
     padding: 0 0 50px 40px;
   }
+
+
+
+  .carouselContainer {
+    max-width: 60vw;
+    width: 60vw;
+  }
+
+  .carouselScreenImage {
+    width: 55%;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .carouselScreenImage>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carouselScreenDescription {
+    padding-left: 1em;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .carouselScreenDescription>p, .carouselScreenDescription h2, .carouselScreenDescription h3 {
+    margin: 0.5em 0;
+  }
+
+  .carouselInstructions {
+    display: none;
+  }
+}
+
+
+
+
+
+/* custom override css */
+
+.awssld__bar {
+  background-color: var(--fontColorSecondary) !important;
 }

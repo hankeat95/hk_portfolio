@@ -10,47 +10,63 @@ export default function Header() {
     useEffect(() => {
         if (isDarkMode) {
             document.documentElement.style.setProperty(
-                '--global-backgroundColor',
+                '--backgroundColor',
                 '#121212'
             );
             document.documentElement.style.setProperty(
-                '--global-fontColor',
+                '--fontColor',
                 'rgb(255, 255, 255, 0.75)'
             );
             document.documentElement.style.setProperty(
-                '--global-fontColorPartial',
+                '--fontColorPartial',
                 'rgb(255, 255, 255, 0.75)'
             );
             document.documentElement.style.setProperty(
-                '--global-fontColorBright',
+                '--fontColorBright',
                 'white'
             );
             document.documentElement.style.setProperty(
                 '--timelineTrackDefaultOpacity',
                 '0.2'
             );
+            document.documentElement.style.setProperty(
+                '--carouselDescriptionBackgroundColor',
+                'rgba(0,0,0,0.5)'
+            );
+            document.documentElement.style.setProperty(
+                '--carouselShadowColor',
+                'black'
+            );
             localStorage.removeItem("ewwwww_nondarkmodeuser")
         }
         else {
             document.documentElement.style.setProperty(
-                '--global-backgroundColor',
-                'white'
+                '--backgroundColor',
+                'snow'
             );
             document.documentElement.style.setProperty(
-                '--global-fontColor',
+                '--fontColor',
                 'black'
             );
             document.documentElement.style.setProperty(
-                '--global-fontColorPartial',
+                '--fontColorPartial',
                 'darkgray'
             );
             document.documentElement.style.setProperty(
-                '--global-fontColorBright',
+                '--fontColorBright',
                 'black'
             );
             document.documentElement.style.setProperty(
                 '--timelineTrackDefaultOpacity',
                 '0.8'
+            );
+            document.documentElement.style.setProperty(
+                '--carouselDescriptionBackgroundColor',
+                'rgba(255, 250, 250, 0.95)'
+            );
+            document.documentElement.style.setProperty(
+                '--carouselShadowColor',
+                'darkgray'
             );
             localStorage.setItem("ewwwww_nondarkmodeuser", true)
         }

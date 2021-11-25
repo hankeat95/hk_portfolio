@@ -84,8 +84,8 @@ export default function WorkExperiencePage() {
             months_Display = `${months_Elapsed} ${months_Elapsed > 1 ? "months" : "month"}`;
         }
         return (
-            <Fade delay={400}>
-                <li key={item.id} className={index === 0 ? "currentWorkExp" : ""}>
+            <Fade key={item.id} delay={400}>
+                <li className={index === 0 ? "currentWorkExp" : ""}>
                     <div className="workExp_TimelineHeader">
                         {item.companyName}, {item.positionName}
                     </div>

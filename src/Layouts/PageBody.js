@@ -3,7 +3,8 @@ import HomePage from '../Contents/1_HomePage'
 import AboutMePage from '../Contents/2_AboutMePage'
 import WorkExperiencePage from '../Contents/3_WorkExperiencePage'
 import Fade from 'react-reveal/Fade';
-import Qualifications from '../Contents/4_Qualifications';
+import QualificationsPage from '../Contents/4_QualificationsPage';
+import SkillsPage from '../Contents/5_SkillsPage';
 
 
 export default function PageBody() {
@@ -44,17 +45,20 @@ export default function PageBody() {
 
     const handleAppBodyScroll = (e) => {
         let scrolledAmount = e.target.scrollTop / e.target.scrollHeight;
-        // console.log('scrolledAmount', scrolledAmount)
-        if (scrolledAmount > 0.77) {
+        console.log('scrolledAmount', scrolledAmount)
+        if (scrolledAmount > 0.81) {
+            setcurrentItem(5)
+        }
+        else if (scrolledAmount > 0.65) {
             setcurrentItem(4)
         }
-        else if (scrolledAmount > 0.33) {
+        else if (scrolledAmount > 0.27) {
             setcurrentItem(3)
         }
-        else if (scrolledAmount > 0.10) {
+        else if (scrolledAmount > 0.07) {
             setcurrentItem(2)
         }
-        else if (scrolledAmount < 0.10) {
+        else if (scrolledAmount < 0.07) {
             setcurrentItem(1)
         }
         handleCurrentItemChange()
@@ -121,8 +125,9 @@ export default function PageBody() {
                 <div ref={homePageRef}><HomePage moreInfoScrollHelper={moreInfoscrollHelper}/></div>
                 <div ref={aboutMePageRef}><AboutMePage /></div>
                 <div ref={experiencePageRef}><WorkExperiencePage /></div>
-                <div ref={qualificationPageRef}><Qualifications /></div>
+                <div ref={qualificationPageRef}><QualificationsPage /></div>
+                <div ref={skillsPageRef}><SkillsPage /></div>
             </div>
-        </div >
+        </div>
     )
 }

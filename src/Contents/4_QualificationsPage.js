@@ -60,10 +60,12 @@ export default function QualificationsPage() {
                 <Fade delay={400}>
                     <div className="pageHeaderSubTitle">My education and achievements</div>
                 </Fade>
-                <p className="carouselInstructions" >Tap on images for more info</p>
-                <div className="carouselContainer">
-                    <EducationCarousel dataSource={qualificationsDataSource} />
-                </div>
+                <Fade delay={500}>
+                    <p className="carouselInstructions" >Tap on images for more info</p>
+                    <div className="carouselContainer">
+                        <EducationCarousel dataSource={qualificationsDataSource} />
+                    </div>
+                </Fade>
             </div>
         </div>
     )
@@ -119,7 +121,7 @@ function EducationCarousel(props) {
                 onClose={handleCloseModal}
             >
                 <ModalFade in={isModalOpen}>
-                    <div style={{background:"black"}}>
+                    <div style={{ background: "black" }}>
                         <div className="sliderPopUpBox">
                             <CloseIcon className="sliderPopUpCloseButton" onClick={handleCloseModal} />
                             {modalHeader}

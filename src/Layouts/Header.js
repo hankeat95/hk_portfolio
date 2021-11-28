@@ -37,6 +37,10 @@ export default function Header() {
                 '--carouselShadowColor',
                 'black'
             );
+            document.documentElement.style.setProperty(
+                '--languageRatingDefaultColor',
+                'rgba(245, 245, 245, 0.1)'
+            );
             localStorage.removeItem("ewwwww_nondarkmodeuser")
         }
         else {
@@ -67,6 +71,10 @@ export default function Header() {
             document.documentElement.style.setProperty(
                 '--carouselShadowColor',
                 'darkgray'
+            );
+            document.documentElement.style.setProperty(
+                '--languageRatingDefaultColor',
+                'rgba(169, 169, 169,0.4)'
             );
             localStorage.setItem("ewwwww_nondarkmodeuser", true)
         }

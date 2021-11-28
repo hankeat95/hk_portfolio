@@ -11,6 +11,8 @@ html {
   --timelineItemPercentage: calc(100% / 6);
   --carouselDescriptionBackgroundColor: rgba(0, 0, 0, 0.5);
   --carouselShadowColor: black;
+  --languageRatingDefaultColor: rgba(245, 245, 245, 0.1);
+  --languageRatingDefaultColor: rgba(169, 169, 169, 0.2);
 }
 
 body {
@@ -213,7 +215,7 @@ body {
 }
 
 .profileName {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--fontColorBright);
 }
@@ -455,25 +457,91 @@ body {
   display: none;
 }
 
-.sliderPopUpBox{
-  position:absolute;
-  top: 50%; 
+.sliderPopUpBox {
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--backgroundColor);
   border: 1px solid black;
   width: 80vw;
   text-align: center;
-  padding:10px;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.sliderPopUpCloseButton{
-  float:right;
+.sliderPopUpCloseButton {
+  float: right;
 }
 
 .carouselInstructions {
-  font-size:small;
+  font-size: small;
+}
+
+
+.skillsLoopingHeader {
+  font-size: 1.5em
+}
+
+.skillsLoopingList {
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--iconColor)
+}
+
+.skillsMarquee {
+  margin: 3vh 0 10vh 0;
+  background-color: rgba(169, 169, 169, 0.2);
+  border-radius: 20px;
+}
+
+.skillsMarquee img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.languageItemContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.languageRatings {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width:250px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin:auto;
+}
+
+.languageRatingDots {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0  
+}
+
+.markedDots {
+  background-color: var(--iconColor);
+}
+
+.normalDots {
+  background-color: var(--languageRatingDefaultColor);
+}
+
+.languageDescription>div:first-child {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.languageDescription>div:nth-child(2) {
+  font-size: 0.7em;
+  font-style: italic;
 }
 
 @keyframes moreInfoDivAnimation {
@@ -598,6 +666,33 @@ body {
 
   .carouselInstructions {
     display: none;
+  }
+
+  .skillsLoopingHeader {
+    font-size: 2.5em
+  }
+
+  .skillsMarquee img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 30px;
+  }
+
+  .skillsLoopingList {
+    font-size: 2.5em;
+  }
+
+  .languageDescription>div:first-child {
+    font-size: 1.5em;
+  }
+  
+  .languageDescription>div:nth-child(2) {
+    font-size: 0.8em;
+  }
+
+  .languageRatings {
+    width: 100%;
   }
 }
 

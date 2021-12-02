@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hk_portfolio/static/css/main.bf415918.chunk.css",
+    "main.css": "/hk_portfolio/static/css/main.3e5e9732.chunk.css",
     "main.js": "/hk_portfolio/static/js/main.9316824e.chunk.js",
     "main.js.map": "/hk_portfolio/static/js/main.9316824e.chunk.js.map",
     "runtime-main.js": "/hk_portfolio/static/js/runtime-main.7d5f7089.js",
@@ -12,7 +12,7 @@
     "static/js/3.3384f860.chunk.js.map": "/hk_portfolio/static/js/3.3384f860.chunk.js.map",
     "index.html": "/hk_portfolio/index.html",
     "static/css/2.ed1298f3.chunk.css.map": "/hk_portfolio/static/css/2.ed1298f3.chunk.css.map",
-    "static/css/main.bf415918.chunk.css.map": "/hk_portfolio/static/css/main.bf415918.chunk.css.map",
+    "static/css/main.3e5e9732.chunk.css.map": "/hk_portfolio/static/css/main.3e5e9732.chunk.css.map",
     "static/js/2.18b12b85.chunk.js.LICENSE.txt": "/hk_portfolio/static/js/2.18b12b85.chunk.js.LICENSE.txt",
     "static/media/CV_LeeHanKeat.00e3cdf6.pdf": "/hk_portfolio/static/media/CV_LeeHanKeat.00e3cdf6.pdf",
     "static/media/HK.9d6e48f5.jpg": "/hk_portfolio/static/media/HK.9d6e48f5.jpg",
@@ -34,7 +34,7 @@
     "static/js/runtime-main.7d5f7089.js",
     "static/css/2.ed1298f3.chunk.css",
     "static/js/2.18b12b85.chunk.js",
-    "static/css/main.bf415918.chunk.css",
+    "static/css/main.3e5e9732.chunk.css",
     "static/js/main.9316824e.chunk.js"
   ]
 }

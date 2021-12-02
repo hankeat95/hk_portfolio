@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ProfilePic from '../Resources/HK.jpg'
 import Button from '@mui/material/Button';
 import CallIcon from '@mui/icons-material/Call';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Fade from 'react-reveal/Fade';
 import Typist from 'react-typist';
 
@@ -15,8 +15,13 @@ export default function HomePage(props) {
             setIsPolygon(true);
         }, 1500);
     })
+
+    const handleOnClickContactMeButton = () => {
+        document.getElementById('contactSection').scrollIntoView();
+    }
+
     return (
-        <div className="contentPage">
+        <div id="homeSection" className="contentPage">
             <div className="homePageContentsContainer">
                 <div className={"profilePicContainer " + (isPolygonSet ? "polygon" : "")}>
                     <Fade left delay={0}>
@@ -32,7 +37,7 @@ export default function HomePage(props) {
                     }} className="profileName">
                         <span>Hi, </span>
                         <Typist.Delay ms={1000} />
-                        <span>I'm Lee Han Keat!</span>
+                        <span>I'm Lee Han Keat</span>
                     </Typist>
 
                     <Fade top delay={500}>
@@ -47,17 +52,15 @@ export default function HomePage(props) {
 
                     <div className="profileActionButtons">
                         <Fade top delay={1500}>
-                            <Button color="secondary" endIcon={<CallIcon />} variant="contained">Contact Me</Button>
+                            <Button onClick={handleOnClickContactMeButton} color="secondary" endIcon={<CallIcon />} variant="contained">Contact Me</Button>
                         </Fade>
-                        <Fade top delay={1700}>
+                        {/* <Fade top delay={1700}>
                             <div onClick={props.moreInfoScrollHelper} className="profileMoreInfoDiv">
                                 <span>More info</span>
                                 <span className="profileMoreInfoArrowIcon"><KeyboardArrowDownIcon fontSize="large" /></span>
                             </div>
-                        </Fade>
+                        </Fade> */}
                     </div>
-
-
                 </div>
             </div>
         </div>

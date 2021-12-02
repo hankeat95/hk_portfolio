@@ -8,10 +8,12 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import Moment from 'react-moment';
 import Fade from 'react-reveal/Fade';
 import EventIcon from '@mui/icons-material/Event';
+import CV_PDF from '../Resources/CV_LeeHanKeat.pdf';
+
 
 export default function AboutMePage() {
     return (
-        <div className="contentPage">
+        <div id="aboutMeSection" className="contentPage">
             <div className="pageHeaderContainer">
                 <div className="pageHeaderTitle">About Me</div>
                 <div className="pageHeaderSubTitle">Something more about me?</div>
@@ -31,35 +33,35 @@ export default function AboutMePage() {
                 </Fade>
             </div>
             <div className="aboutMeExtraDetails">
-            <Fade delay={400}>
-                <div className="aboutMePersonalDetails">
-                    <Fade delay={400}>
-                        <div>
-                            <Tooltip enterTouchDelay={0} placement="top" title="Ethnicity">
-                                <div><EmojiPeopleIcon fontSize="large" /></div>
-                            </Tooltip>
-                            <div className="aboutMePersonalDetailsValue">Chinese</div>
-                        </div>
-                    </Fade>
-                    <Fade delay={400}>
-                        <div>
-                            <Tooltip enterTouchDelay={0} placement="top" title="Current Location">
-                                <div><ExploreIcon fontSize="large" /></div>
-                            </Tooltip>
-                            <div className="aboutMePersonalDetailsValue">Penang, Malaysia</div>
-                        </div>
-                    </Fade>
-                    <Fade delay={400}>
-                        <div>
-                            <Tooltip enterTouchDelay={0} placement="top" title="Age">
-                                <div><EventIcon fontSize="large" /></div>
-                            </Tooltip>
-                            <div className="aboutMePersonalDetailsValue">
-                                <Moment diff="1995-04-02" unit="years"></Moment> years old
+                <Fade delay={400}>
+                    <div className="aboutMePersonalDetails">
+                        <Fade delay={400}>
+                            <div>
+                                <Tooltip enterTouchDelay={0} placement="top" title="Ethnicity">
+                                    <div><EmojiPeopleIcon fontSize="large" /></div>
+                                </Tooltip>
+                                <div className="aboutMePersonalDetailsValue">Chinese</div>
                             </div>
-                        </div>
-                    </Fade>
-                </div>
+                        </Fade>
+                        <Fade delay={400}>
+                            <div>
+                                <Tooltip enterTouchDelay={0} placement="top" title="Current Location">
+                                    <div><ExploreIcon fontSize="large" /></div>
+                                </Tooltip>
+                                <div className="aboutMePersonalDetailsValue">Penang, Malaysia</div>
+                            </div>
+                        </Fade>
+                        <Fade delay={400}>
+                            <div>
+                                <Tooltip enterTouchDelay={0} placement="top" title="Age">
+                                    <div><EventIcon fontSize="large" /></div>
+                                </Tooltip>
+                                <div className="aboutMePersonalDetailsValue">
+                                    <Moment diff="1995-04-02" unit="years"></Moment> years old
+                                </div>
+                            </div>
+                        </Fade>
+                    </div>
                 </Fade>
                 <Fade delay={400}>
                     <div className="aboutMeWorkExperienceCounter">
@@ -75,7 +77,9 @@ export default function AboutMePage() {
                 </Fade>
                 <Fade delay={400}>
                     <div>
-                        <Button variant="contained" startIcon={<DescriptionIcon />}>Get my resume</Button>
+                        <a className="downloadCVButton" download="CV_LeeHanKeat.pdf" href={CV_PDF}>
+                            <Button variant="contained" startIcon={<DescriptionIcon />}>Get my resume</Button>
+                        </a>
                     </div>
                 </Fade>
             </div>

@@ -52,7 +52,7 @@ export default function QualificationsPage() {
 
 
     return (
-        <div className="contentPage">
+        <div id="qualificationsSection" className="contentPage">
             <div className="pageHeaderContainer">
                 <Fade delay={300}>
                     <div className="pageHeaderTitle">Qualifications</div>

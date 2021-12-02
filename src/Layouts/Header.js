@@ -3,8 +3,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Tooltip from '@mui/material/Tooltip';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
 
-export default function Header() {
+
+export default function Header(props) {
+
+
     const [isDarkMode, setisDarkMode] = useState(localStorage.getItem("ewwwww_nondarkmodeuser") ? false : true)
 
     useEffect(() => {
@@ -91,6 +97,41 @@ export default function Header() {
         setisDarkMode(!isDarkMode);
     }
 
+    const [menuAnchor, setMenuAnchor] = useState(null);
+    const open = Boolean(menuAnchor);
+    const handleMenuClick = (event) => {
+        setMenuAnchor(event.currentTarget);
+    };
+    const handleMenuClose = () => {
+        setMenuAnchor(null);
+      };
+    const handleMenuItemSelected = (selectedItem) => {
+        setMenuAnchor(null);
+        switch (selectedItem) {
+            case 'home':
+                document.getElementById('homeSection').scrollIntoView();
+                break;
+            case 'aboutme':
+                document.getElementById('aboutMeSection').scrollIntoView();
+                break;
+            case 'experience':
+                document.getElementById('experienceSection').scrollIntoView();
+                break;
+            case 'qualifications':
+                document.getElementById('qualificationsSection').scrollIntoView();
+                break;
+            case 'skills':
+                document.getElementById('skillsSection').scrollIntoView();
+                break;
+            case 'contact':
+                document.getElementById('contactSection').scrollIntoView();
+                break;
+            default:
+                break;
+        }
+
+    };
+
     return (
         <div className="appHeader">
             <div className="headerLogo" onClick={handleHeaderLogoClick}>HAN KEAT</div>
@@ -101,11 +142,22 @@ export default function Header() {
                     </div>
                 </Tooltip>
                 <div className="headerMenu">
-                    <MenuIcon />
+                    <MenuIcon onClick={handleMenuClick} />
+                    <Menu
+                        anchorEl={menuAnchor}
+                        open={open}
+                        onClose={handleMenuClose}
+                        TransitionComponent={Fade}
+                    >
+                        <MenuItem onClick={() => { handleMenuItemSelected("home") }}>Home</MenuItem>
+                        <MenuItem onClick={() => { handleMenuItemSelected("aboutme") }}>About Me</MenuItem>
+                        <MenuItem onClick={() => { handleMenuItemSelected("experience") }}>Experience</MenuItem>
+                        <MenuItem onClick={() => { handleMenuItemSelected("qualifications") }}>Qualifications</MenuItem>
+                        <MenuItem onClick={() => { handleMenuItemSelected("skills") }}>Skills</MenuItem>
+                        <MenuItem onClick={() => { handleMenuItemSelected("contact") }}>Contact</MenuItem>
+                    </Menu>
                 </div>
-
             </div>
-
         </div>
     )
 }

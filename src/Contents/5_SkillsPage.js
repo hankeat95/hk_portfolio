@@ -19,7 +19,7 @@ import LanguageRatingDots from '../CustomComponents/LanguageRatingDots';
 
 export default function SkillsPage() {
     return (
-        <div className="contentPage">
+        <div id="skillsSection" className="contentPage">
             <div className="pageHeaderContainer">
                 <div className="skillsLoopingHeader">I am experienced in </div>
                 <TextLoop className="skillsLoopingList" interval={1300} mask={true}>
@@ -28,7 +28,7 @@ export default function SkillsPage() {
                     <span>C#</span>
                     <span>ASP.NET</span>
                     <span>MySQL</span>
-                    <span>JQuery</span>
+                    <span>jQuery</span>
                     <span>ReactJS</span>
                     <span>Visual Studio</span>
                     <span>Python</span>

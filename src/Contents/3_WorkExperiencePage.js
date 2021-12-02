@@ -103,13 +103,13 @@ export default function WorkExperiencePage() {
     })
 
     return (
-        <div className="contentPage">
+        <div id="experienceSection" className="contentPage">
             <div className="pageHeaderContainer">
                 <Fade delay={400}>
                     <div className="pageHeaderTitle">Work Experience</div>
                 </Fade>
                 <Fade delay={400}>
-                    <div className="pageHeaderSubTitle">Here's my career history</div>
+                    <div className="pageHeaderSubTitle">My career history</div>
                 </Fade>
                 <div className="workExp_TimelineDiv">
                     <div className="timelineBox">

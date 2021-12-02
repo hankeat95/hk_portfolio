@@ -5,10 +5,14 @@ import WorkExperiencePage from '../Contents/3_WorkExperiencePage'
 import Fade from 'react-reveal/Fade';
 import QualificationsPage from '../Contents/4_QualificationsPage';
 import SkillsPage from '../Contents/5_SkillsPage';
+import ContactPage from '../Contents/6_ContactPage';
+import FooterPage from '../Contents/7_FooterPage';
+
+
 
 
 export default function PageBody() {
-    const percentagePerTimelineItem = 100 / 6;
+    const percentagePerTimelineItem = 100 / 5;
     const [currentItem, setcurrentItem] = useState(1)
     const [isMouseEnter, setIsMouseEnter] = useState(false);
     const homePageRef = useRef();
@@ -16,7 +20,7 @@ export default function PageBody() {
     const experiencePageRef = useRef();
     const qualificationPageRef = useRef();
     const skillsPageRef = useRef();
-    const personalityPageRef = useRef();
+    // const personalityPageRef = useRef();
     const contactPageRef = useRef();
 
 
@@ -46,13 +50,16 @@ export default function PageBody() {
     const handleAppBodyScroll = (e) => {
         let scrolledAmount = e.target.scrollTop / e.target.scrollHeight;
         // console.log('scrolledAmount', scrolledAmount)
-        if (scrolledAmount > 0.81) {
-            setcurrentItem(5)
+        if (scrolledAmount > 0.84) {
+            setcurrentItem(6)
         }
         else if (scrolledAmount > 0.65) {
+            setcurrentItem(5)
+        }
+        else if (scrolledAmount > 0.53) {
             setcurrentItem(4)
         }
-        else if (scrolledAmount > 0.27) {
+        else if (scrolledAmount > 0.23) {
             setcurrentItem(3)
         }
         else if (scrolledAmount > 0.07) {
@@ -89,9 +96,9 @@ export default function PageBody() {
             case 'skills':
                 skillsPageRef.current.scrollIntoView({ behavior: 'smooth' });
                 break;
-            case 'personality':
-                personalityPageRef.current.scrollIntoView({ behavior: 'smooth' });
-                break;
+            // case 'personality':
+            //     personalityPageRef.current.scrollIntoView({ behavior: 'smooth' });
+            //     break;
             case 'contact':
                 contactPageRef.current.scrollIntoView({ behavior: 'smooth' });
                 break;
@@ -101,9 +108,9 @@ export default function PageBody() {
 
     }
 
-    const moreInfoscrollHelper = () => {
-        aboutMePageRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    // const moreInfoscrollHelper = () => {
+    //     aboutMePageRef.current.scrollIntoView({ behavior: 'smooth' });
+    // }
     return (
         <div onScroll={(e) => handleAppBodyScroll(e)} className="appBody">
             <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="floatingTimeLine">
@@ -115,18 +122,21 @@ export default function PageBody() {
                         <div onClick={() => { handleScrollTo('experience') }} className="timelineContent timelineItem3 "><span>Experience</span></div>
                         <div onClick={() => { handleScrollTo('qualifications') }} className="timelineContent timelineItem4 "><span>Qualifications</span></div>
                         <div onClick={() => { handleScrollTo('skills') }} className="timelineContent timelineItem5 "><span>Skills</span></div>
-                        <div onClick={() => { handleScrollTo('personality') }} className="timelineContent timelineItem6 "><span>Personality</span></div>
-                        <div onClick={() => { handleScrollTo('contact') }} className="timelineContent timelineItem7 timelineItemLast "><span>Contact</span></div>
+                        {/* <div onClick={() => { handleScrollTo('personality') }} className="timelineContent timelineItem6 "><span>Personality</span></div> */}
+                        <div onClick={() => { handleScrollTo('contact') }} className="timelineContent timelineItem6 timelineItemLast "><span>Contact</span></div>
 
                     </div>
                 </Fade>
             </div>
             <div className="appBodyContent">
-                <div ref={homePageRef}><HomePage moreInfoScrollHelper={moreInfoscrollHelper}/></div>
+                {/* <div ref={homePageRef}><HomePage moreInfoScrollHelper={moreInfoscrollHelper} /></div> */}
+                <div ref={homePageRef}><HomePage /></div>
                 <div ref={aboutMePageRef}><AboutMePage /></div>
                 <div ref={experiencePageRef}><WorkExperiencePage /></div>
                 <div ref={qualificationPageRef}><QualificationsPage /></div>
                 <div ref={skillsPageRef}><SkillsPage /></div>
+                <div ref={contactPageRef}><ContactPage /></div>
+                <div><FooterPage /></div>
             </div>
         </div>
     )

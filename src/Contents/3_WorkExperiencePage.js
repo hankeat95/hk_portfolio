@@ -6,10 +6,18 @@ export default function WorkExperiencePage() {
     let workExperienceList = [
         {
             id: 1,
+            companyName: "Intel Corporation",
+            positionName: "IT Software Development Engineer",
+            dateStarted: new Date("2021-02-14 00:00:00"),
+            dateEnded: "Current",
+            descriptionPoints: [ ]
+        },
+        {
+            id: 2,
             companyName: "Plexus Corp",
             positionName: "Application Developer II (R&D)",
             dateStarted: new Date("2021-01-02 00:00:00"),
-            dateEnded: "Current",
+            dateEnded: new Date("2022-02-11 00:00:00"),
             descriptionPoints: [
                 "Improved code review execution for my team of Developers",
                 "Actively participating and contributing ideas/solutions during group brainstorming/discussions for various projects",
@@ -20,7 +28,7 @@ export default function WorkExperiencePage() {
             ]
         },
         {
-            id: 2,
+            id: 3,
             companyName: "Plexus Corp",
             positionName: "Application Developer I (R&D)",
             dateStarted: new Date("2019-08-02 00:00:00"),
@@ -33,7 +41,7 @@ export default function WorkExperiencePage() {
             ]
         },
         {
-            id: 3,
+            id: 4,
             companyName: "Plexus Corp",
             positionName: "Application Developer I",
             dateStarted: new Date("2019-01-07 00:00:00"),
@@ -49,7 +57,7 @@ export default function WorkExperiencePage() {
             ]
         },
         {
-            id: 4,
+            id: 5,
             companyName: "Motorola Solutions",
             positionName: "Software Engineer Intern",
             dateStarted: new Date("2018-07-01 00:00:00"),

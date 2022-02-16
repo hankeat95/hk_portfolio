@@ -50,9 +50,8 @@ export default function SkillsPage() {
                 <Fade delay={400}>
                     <h1>Languages</h1>
                 </Fade>
-                <Fade delay={600}>
-                    <div className="languages">
-
+                <div className="languages">
+                    <Fade delay={600}>
                         <div className="languageItemContainer">
                             <div className="languageDescription">
                                 <div>English</div>
@@ -62,6 +61,8 @@ export default function SkillsPage() {
                                 <LanguageRatingDots highlightedDots={5} />
                             </div>
                         </div>
+                    </Fade>
+                    <Fade delay={700}>
                         <div className="languageItemContainer">
                             <div className="languageDescription">
                                 <div>Malay</div>
@@ -71,6 +72,8 @@ export default function SkillsPage() {
                                 <LanguageRatingDots highlightedDots={5} />
                             </div>
                         </div>
+                    </Fade>
+                    <Fade delay={800}>
                         <div className="languageItemContainer">
                             <div className="languageDescription">
                                 <div>Mandarin</div>
@@ -79,7 +82,8 @@ export default function SkillsPage() {
                             <div className="languageRatings" >
                                 <LanguageRatingDots highlightedDots={4} />
                             </div>
-                        </div>
+                        </div> </Fade>
+                    <Fade delay={900}>
                         <div className="languageItemContainer">
                             <div className="languageDescription">
                                 <div>Cantonese</div>
@@ -89,8 +93,8 @@ export default function SkillsPage() {
                                 <LanguageRatingDots highlightedDots={4} />
                             </div>
                         </div>
-                    </div>
-                </Fade>
+                    </Fade>
+                </div>
             </div>
         </div>
     )

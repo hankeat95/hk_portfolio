@@ -20,8 +20,9 @@ export default function AboutMePage() {
             </div>
             <div className="aboutMeDescriptions">
                 <Fade delay={400}>
-                    <p>Currently working as an Application Developer II for Plexus Corp, Penang. I develop applications for company's internal use.
-                        Working closely with C#/ASP.NET, JavaScript, SQL and Frontend developments.</p>
+                    {/* <p>Currently working as an Application Developer II for Plexus Corp, Penang. I develop applications for company's internal use.
+                        Working closely with C#/ASP.NET, JavaScript, SQL and Frontend developments.</p> */}
+                    <p>Currently working as an IT Software Development Engineer for Intel Corporation, Penang. </p>
                 </Fade>
                 <Fade delay={400}>
                     <p>Bachelor Degree in Computer Science, majoring in Information Security.</p>

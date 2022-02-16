@@ -17,13 +17,13 @@ export default function ContactPage() {
                 <Fade delay={400}>
                     <div className="pageHeaderSubTitle">Drop me a message !</div>
                 </Fade>
-                <div className="contactContainer">
-                    <div className="emailFormDiv">
-                        <EmailForm />
+                <Fade delay={400}>
+                    <div className="contactContainer">
+                        <div className="emailFormDiv">
+                            <EmailForm />
+                        </div>
                     </div>
-
-                </div>
-
+                </Fade>
             </div>
         </div>
     )

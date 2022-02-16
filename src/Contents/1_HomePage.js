@@ -41,7 +41,7 @@ export default function HomePage(props) {
                     </Typist>
 
                     <Fade top delay={500}>
-                        <div className="profileJobTitle">Application Developer II, Plexus Corp</div>
+                        <div className="profileJobTitle">IT Software Development Engineer, Intel Corporation</div>
                     </Fade>
                     <Fade top delay={1000}>
                         <div className="profileDescription">

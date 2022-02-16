@@ -568,7 +568,8 @@ body {
 .footerContainer {
   display: flex;
   justify-content: space-between;
-  padding: 7vh 0;
+  margin: 10vh 0;
+  padding: 10vh 0;
 }
 
 .footerContainer span {
@@ -578,9 +579,9 @@ body {
 .socialMediaDiv {
   display: flex;
   flex-direction: row;
+  width: 50%;
+  align-items: center;
   justify-content: space-around;
-  width: 60%;
-  /* margin:auto; */
 }
 
 .socialMediaDiv a {
@@ -588,8 +589,7 @@ body {
 }
 
 .socialMediaDiv svg {
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  font-size: 30px;
 }
 
 .socialMediaDiv svg:hover {
@@ -770,7 +770,11 @@ body {
   }
 
   .socialMediaDiv {
-    width: 30%;
+    width: 20%;
+  }
+
+  .socialMediaDiv svg {
+    font-size: 40px;
   }
 }
 

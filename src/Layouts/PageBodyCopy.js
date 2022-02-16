@@ -68,13 +68,13 @@ export default function PageBodyCopy() {
     return (
         <div className="appBody">
             <div  ref={content1Ref} onScroll={() => { onScroll(content1Ref) }}  className="appBodyContent1">
-                <div className="haha">content 1 here</div>
+                <div >content 1 here</div>
             </div>
             <div  ref={content2Ref} onScroll={() => { onScroll(content2Ref) }}  className="appBodyContent2">
-                <div className="haha">content 2 here</div>
+                <div >content 2 here</div>
             </div>
             <div  className="appBodyContent3">
-                <div className="haha">content 3 here</div>
+                <div >content 3 here</div>
             </div>
         </div>
     )

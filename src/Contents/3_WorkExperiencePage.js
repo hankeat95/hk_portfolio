@@ -8,7 +8,7 @@ export default function WorkExperiencePage() {
             id: 1,
             companyName: "Intel Corporation",
             positionName: "IT Software Development Engineer",
-            dateStarted: new Date("2021-02-14 00:00:00"),
+            dateStarted: new Date("2022-02-14 00:00:00"),
             dateEnded: "Current",
             descriptionPoints: [ ]
         },

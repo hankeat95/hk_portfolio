@@ -10,7 +10,21 @@ export default function WorkExperiencePage() {
             positionName: "IT Software Development Engineer",
             dateStarted: new Date("2022-02-14 00:00:00"),
             dateEnded: "Current",
-            descriptionPoints: [ ]
+            descriptionPoints: [ 
+                "My Agile team support and maintain more than 50 applications (vendor/SaaS & in-house built). ",
+                "Some tech-stack/components that are commonly used by my team are C#, dotnet, MSSQL, ReactJS, JQuery, Selenium, Windows Server & IIS, containerization (docker images, Harbor registry, Rancher K8s) ",
+                "Delivered a full-stack solution to bridge external/vendor application's authorization control system to Intel's internal AGS authorization. ",
+                "Knowledgeable in creating frontend/UI&UX design mockup using Figma and Intel's design system.",
+                "Experienced in preparing & presenting proposals/ideas/solutions to management and business stakeholders. ",
+                "Skilled in developing & translating 30+ test cases in Jira to Automation Test Scripts (Selenium in DotNet).",
+                "Improved team efficiency by implementing CI/CD process in applications using GitHub Actions & self-hosted runners.", 
+                "Experienced in Production Change Process and documentations in ServiceNow. ",
+                "Accomplished applications' tech-debt reduction by framework upgrades, Azure SSO Authentication implementation, and integrating Intel Authorization (AGS) control.", 
+                "Experienced in remediate vulnerabilities in software codes picked up by Intel's code vulnerability scanners.", 
+                "Experienced in applications' landing & transition from different team/geo, which includes support model and technical resources.",
+                "Led TLS Certificate Automation project and achieved to increase segment's automation percentage from 40% to 90% within 6 months in year 2022", 
+                "Led and organized \"Application Developers Knowledge Sharing\" within team to encourage teamwork, presentation skills and new technology exposures."
+             ]
         },
         {
             id: 2,

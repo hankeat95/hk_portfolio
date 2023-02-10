@@ -11,6 +11,8 @@ import MSSMPic from '../Resources/skills/mssm.png'
 import MySQLPic from '../Resources/skills/mysql.png'
 import PythonPic from '../Resources/skills/python.png'
 import ReactPic from '../Resources/skills/react.png'
+import DockerPic from '../Resources/skills/docker.png'
+import seleniumPic from '../Resources/skills/selenium.png'
 import VisualStudioPic from '../Resources/skills/visualstudio.png'
 import LanguageRatingDots from '../CustomComponents/LanguageRatingDots';
 
@@ -32,6 +34,8 @@ export default function SkillsPage() {
                     <span>ReactJS</span>
                     <span>Visual Studio</span>
                     <span>Python</span>
+                    <span>Docker</span>
+                    <span>Selenium</span>
                 </TextLoop>
 
                 <Marquee className="skillsMarquee" speed={80} gradient={false}>
@@ -45,6 +49,8 @@ export default function SkillsPage() {
                     <img src={PythonPic} alt="PythonPic" />
                     <img src={ReactPic} alt="ReactPic" />
                     <img src={VisualStudioPic} alt="VisualStudioPic" />
+                    <img src={DockerPic} alt="DockerPic" />
+                    <img src={seleniumPic} alt="SeleniumPic" />
                 </Marquee>
 
                 <Fade delay={400}>

@@ -8,7 +8,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import Moment from 'react-moment';
 import Fade from 'react-reveal/Fade';
 import EventIcon from '@mui/icons-material/Event';
-import CV_PDF from '../Resources/CV_LeeHanKeat.pdf';
+// import CV_PDF from '../Resources/CV_LeeHanKeat.pdf';
 
 
 export default function AboutMePage() {
@@ -76,13 +76,13 @@ export default function AboutMePage() {
                         </div>
                     </div>
                 </Fade>
-                <Fade delay={400}>
+                {/* <Fade delay={400}>
                     <div>
                         <a className="downloadCVButton" download="CV_LeeHanKeat.pdf" href={CV_PDF}>
                             <Button variant="contained" startIcon={<DescriptionIcon />}>Get my resume</Button>
                         </a>
                     </div>
-                </Fade>
+                </Fade> */}
             </div>
 
         </div>

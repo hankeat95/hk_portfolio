@@ -15,7 +15,7 @@ export default function ContactPage() {
                     <div className="pageHeaderTitle">Contact</div>
                 </Fade>
                 <Fade delay={400}>
-                    <div className="pageHeaderSubTitle">Drop me a message !</div>
+                    <div className="pageHeaderSubTitle">Request for my resume or just drop me a message !</div>
                 </Fade>
                 <Fade delay={400}>
                     <div className="contactContainer">

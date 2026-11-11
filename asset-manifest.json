@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/hk_portfolio/static/css/main.bdae2ba3.chunk.css",
+    "main.js": "/hk_portfolio/static/js/main.eeb306ba.chunk.js",
+    "main.js.map": "/hk_portfolio/static/js/main.eeb306ba.chunk.js.map",
+    "runtime-main.js": "/hk_portfolio/static/js/runtime-main.7d5f7089.js",
+    "runtime-main.js.map": "/hk_portfolio/static/js/runtime-main.7d5f7089.js.map",
+    "static/css/2.ed1298f3.chunk.css": "/hk_portfolio/static/css/2.ed1298f3.chunk.css",
+    "static/js/2.934050fc.chunk.js": "/hk_portfolio/static/js/2.934050fc.chunk.js",
+    "static/js/2.934050fc.chunk.js.map": "/hk_portfolio/static/js/2.934050fc.chunk.js.map",
+    "static/js/3.3384f860.chunk.js": "/hk_portfolio/static/js/3.3384f860.chunk.js",
+    "static/js/3.3384f860.chunk.js.map": "/hk_portfolio/static/js/3.3384f860.chunk.js.map",
+    "index.html": "/hk_portfolio/index.html",
+    "static/css/2.ed1298f3.chunk.css.map": "/hk_portfolio/static/css/2.ed1298f3.chunk.css.map",
+    "static/css/main.bdae2ba3.chunk.css.map": "/hk_portfolio/static/css/main.bdae2ba3.chunk.css.map",
+    "static/js/2.934050fc.chunk.js.LICENSE.txt": "/hk_portfolio/static/js/2.934050fc.chunk.js.LICENSE.txt",
+    "static/media/HK.5fd3b574.jpg": "/hk_portfolio/static/media/HK.5fd3b574.jpg",
+    "static/media/academicPaper.145a55d6.png": "/hk_portfolio/static/media/academicPaper.145a55d6.png",
+    "static/media/csharp.456d41f6.png": "/hk_portfolio/static/media/csharp.456d41f6.png",
+    "static/media/css.5bd8c816.png": "/hk_portfolio/static/media/css.5bd8c816.png",
+    "static/media/docker.214251bc.png": "/hk_portfolio/static/media/docker.214251bc.png",
+    "static/media/dotnet.62f07a00.png": "/hk_portfolio/static/media/dotnet.62f07a00.png",
+    "static/media/javascript.dafbcd7f.png": "/hk_portfolio/static/media/javascript.dafbcd7f.png",
+    "static/media/jquery.5218d846.png": "/hk_portfolio/static/media/jquery.5218d846.png",
+    "static/media/mssm.34a4b252.png": "/hk_portfolio/static/media/mssm.34a4b252.png",
+    "static/media/mysql.cdd30395.png": "/hk_portfolio/static/media/mysql.cdd30395.png",
+    "static/media/python.f1a07429.png": "/hk_portfolio/static/media/python.f1a07429.png",
+    "static/media/react.62902a0d.png": "/hk_portfolio/static/media/react.62902a0d.png",
+    "static/media/smi.7afebebb.jpg": "/hk_portfolio/static/media/smi.7afebebb.jpg",
+    "static/media/uthm.963a7e27.jpg": "/hk_portfolio/static/media/uthm.963a7e27.jpg",
+    "static/media/visualstudio.5e937450.png": "/hk_portfolio/static/media/visualstudio.5e937450.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d5f7089.js",
+    "static/css/2.ed1298f3.chunk.css",
+    "static/js/2.934050fc.chunk.js",
+    "static/css/main.bdae2ba3.chunk.css",
+    "static/js/main.eeb306ba.chunk.js"
+  ]
+}

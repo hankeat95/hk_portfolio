@@ -6,10 +6,29 @@ export default function WorkExperiencePage() {
     let workExperienceList = [
         {
             id: 1,
+            companyName: "Siemens Digital Industry Software",
+            positionName: "Product Architect",
+            dateStarted: new Date("2023-06-01 00:00:00"),
+            dateEnded: "Current",
+            descriptionPoints: [ 
+                "Lead the technical design and implementation of a semiconductor MES solution for a major semiconductor manufacturer, supporting two manufacturing sites in Malaysia (Melaka and Kuala Lumpur).",
+                "Provide technical guidance and architectural direction to a team of 6-10 members, serving as a key technical decision point for solution design, implementation, troubleshooting, and technical trade-offs.",
+                "Design and delivered REST APIs and system integrations connecting MES with surrounding manufacturing and enterprise systems.",
+                "Deliver ~100 customizations and features on top of standard (OOB) Opcenter capabilities, translating complex manufacturing requirements into maintainable technical solutions.",
+                "Apply C# development, data modeling, REST APIs, SQL, and proprietary Opcenter backend frameworks to develop and integrate complex MES functionality.",
+                "Improve application and database performance through code refactoring, query optimization, and investigation of application and database bottlenecks, particularly for high-volume manufacturing workflows.",
+                "Resolve critical production issues by developing temporary workarounds and alternative solutions to prevent major production blockers, followed by permanent fixes to address underlying technical issues.", 
+                "Perform deep technical troubleshooting using trace logs, debugging, SQL analysis, and application-level investigation to identify root causes across complex MES workflows.", 
+                "Translate customer and manufacturing requirements into technical architecture and implementation plans while balancing product capabilities, customization, performance, and long-term maintainability.",
+                "Bring deep hands-on experience with Siemens Opcenter Semiconductor, spanning software development, implementation, solution architecture, customization, integration, and production support."
+             ]
+        },
+        {
+            id: 2,
             companyName: "Intel Corporation",
             positionName: "IT Software Development Engineer",
             dateStarted: new Date("2022-02-14 00:00:00"),
-            dateEnded: "Current",
+            dateEnded: new Date("2023-05-31 00:00:00"),
             descriptionPoints: [ 
                 "My Agile team support and maintain more than 50 applications (vendor/SaaS & in-house built). ",
                 "Some tech-stack/components that are commonly used by my team are C#, dotnet, MSSQL, ReactJS, JQuery, Selenium, Windows Server & IIS, containerization (docker images, Harbor registry, Rancher K8s) ",
@@ -27,7 +46,7 @@ export default function WorkExperiencePage() {
              ]
         },
         {
-            id: 2,
+            id: 3,
             companyName: "Plexus Corp",
             positionName: "Application Developer II (R&D)",
             dateStarted: new Date("2021-01-02 00:00:00"),
@@ -42,7 +61,7 @@ export default function WorkExperiencePage() {
             ]
         },
         {
-            id: 3,
+            id: 4,
             companyName: "Plexus Corp",
             positionName: "Application Developer I (R&D)",
             dateStarted: new Date("2019-08-02 00:00:00"),
@@ -55,7 +74,7 @@ export default function WorkExperiencePage() {
             ]
         },
         {
-            id: 4,
+            id: 5,
             companyName: "Plexus Corp",
             positionName: "Application Developer I",
             dateStarted: new Date("2019-01-07 00:00:00"),
@@ -71,7 +90,7 @@ export default function WorkExperiencePage() {
             ]
         },
         {
-            id: 5,
+            id: 6,
             companyName: "Motorola Solutions",
             positionName: "Software Engineer Intern",
             dateStarted: new Date("2018-07-01 00:00:00"),

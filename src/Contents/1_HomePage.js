@@ -41,13 +41,13 @@ export default function HomePage(props) {
                     </Typist>
 
                     <Fade top delay={500}>
-                        <div className="profileJobTitle">IT Software Development Engineer, Intel Corporation</div>
+                        <div className="profileJobTitle">Product Architect, Siemens Digital Industry Software</div>
                     </Fade>
                     <Fade top delay={1000}>
                         <div className="profileDescription">
-                            Making money through a computer.
+                            Turning complexity into clarity.
                             <br />
-                            Eat. Sleep. Write Codes. Repeat.
+                            Turning bytes into bucks.
                         </div> </Fade>
 
                     <div className="profileActionButtons">

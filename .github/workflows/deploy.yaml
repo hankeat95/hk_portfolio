@@ -1,5 +1,5 @@
 
-name: Deploy React Website
+name: Deploy React Portfolio
 
 on:
   push:
@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout master
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
@@ -28,11 +28,13 @@ jobs:
 
       - name: Build React application
         run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build
           publish_branch: gh-pages
           force_orphan: true

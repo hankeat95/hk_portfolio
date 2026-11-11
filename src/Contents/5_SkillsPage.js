@@ -36,6 +36,7 @@ export default function SkillsPage() {
                     <span>Python</span>
                     <span>Docker</span>
                     <span>Selenium</span>
+                    <span>Opcenter</span>
                 </TextLoop>
 
                 <Marquee className="skillsMarquee" speed={80} gradient={false}>

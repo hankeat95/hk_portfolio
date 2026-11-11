@@ -22,7 +22,8 @@ export default function AboutMePage() {
                 <Fade delay={400}>
                     {/* <p>Currently working as an Application Developer II for Plexus Corp, Penang. I develop applications for company's internal use.
                         Working closely with C#/ASP.NET, JavaScript, SQL and Frontend developments.</p> */}
-                    <p>Currently working as an IT Software Development Engineer for Intel Corporation, Penang. </p>
+                    {/* <p>Currently working as an IT Software Development Engineer for Intel Corporation, Penang. </p>*/}
+                    <p>Currently working as an Product Architect at Siemens Digital Industries Software, Penang, Malaysia.</p>
                 </Fade>
                 <Fade delay={400}>
                     <p>Bachelor Degree in Computer Science, majoring in Information Security.</p>
